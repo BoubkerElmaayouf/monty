@@ -74,9 +74,8 @@ void mod_op(stack_t **head, unsigned int counter)
 	stack_t *current;
 
 	current = *head;
-	while (current)
+	for (; current != NULL; current = current->next)
 	{
-		current = current->next;
 		length++;
 	}
 	if (length < 2)
