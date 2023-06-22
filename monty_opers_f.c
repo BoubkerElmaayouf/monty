@@ -74,10 +74,11 @@ void mod_op(stack_t **head, unsigned int counter)
 	stack_t *current;
 
 	current = *head;
-	for (; current != NULL; current = current->next)
-    {
-        length++;
-    }
+	while (current)
+	{
+		current = current->next;
+		length++;
+	}
 	if (length < 2)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
@@ -140,4 +141,3 @@ void div_top_two(stack_t **head, unsigned int counter)
 	*head = current_node->next;
 	free(current_node);
 }
-

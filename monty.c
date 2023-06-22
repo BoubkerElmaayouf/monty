@@ -2,7 +2,7 @@
 #include "monty.h"
 #include <stdio.h>
 
-transport transporter = {NULL, NULL, NULL, 0};
+transport transporter = {NULL, NULL, 0, 0};
 
 /**
  * free_stack - This function frees a doubly linked list
