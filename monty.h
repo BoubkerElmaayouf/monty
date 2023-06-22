@@ -58,7 +58,7 @@ typedef struct transport_s
 extern transport transporter;
 
 /******** prototypes ********/
-
+void free_stack(stack_t *head);
 /*====== add_node.c =======*/
 void addToStack(stack_t **head, unsigned int line_number);
 void push_node(stack_t **head, int n);
@@ -84,6 +84,7 @@ void swap_f(stack_t **head, unsigned int line_number);
 void queue_op(stack_t **head, unsigned int line_number);
 void add_queue(stack_t **head, int new_value);
 void stack_f(stack_t **head, unsigned int line_number);
-
+/*====== monty_execute.c =====*/
+int _execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
 #endif
 

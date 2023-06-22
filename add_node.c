@@ -1,5 +1,6 @@
 #include "monty.h"
 
+void free_stack(stack_t *head);
 /**
  * addToStack - this function adds the top two elements
  * of the stack.
@@ -28,7 +29,7 @@ void addToStack(stack_t **head, unsigned int line_number)
 	}
 	current_node = *head;
 	sum = current_node->n + current_node->next->n;
-	current_node->next->n = current_node;
+	current_node->next->n = sum;
 	*head = current_node->next;
 	free(current_node);
 }

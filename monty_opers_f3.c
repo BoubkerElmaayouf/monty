@@ -86,7 +86,7 @@ void push_op(stack_t **head, unsigned int line_number)
 	}
 	n = atoi(transporter.arg);
 	if (transporter.flag == 0)
-		addnode(head, n);
+		push_node(head, n);
 	else
-		addqueue(head, n);
+		add_queue(head, n);
 }
